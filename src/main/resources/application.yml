@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: projectRedis
+  data:
+    redis:
+      host: redis
+      port: 6379
+  cache:
+    type: redis
+    redis:
+      time-to-live: 600000
+server:
+  port: 8080
