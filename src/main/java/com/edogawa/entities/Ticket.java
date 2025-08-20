@@ -38,7 +38,7 @@ public class Ticket implements java.io.Serializable {
 
 
 	public Ticket() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	
