@@ -13,7 +13,7 @@ It demonstrates how **Spring Cache** (`@Cacheable`, `@CachePut`, `@CacheEvict`) 
 
 ---
 
-## 🗂 Technologies | 使用技術
+## Technologies | 使用技術
 
 -  Java 21  
 -  Spring Boot 3  
@@ -43,7 +43,7 @@ docker run -d --name redis-dev -p 6379:6379 redis:7-alpine
 
 ---
 
-## 🔗 Endpoints | エンドポイント  
+## Endpoints | エンドポイント  
 (Base: `/api/v1/tickets`)
 
 - `GET /{id}` → Get ticket by ID (cached)  
@@ -62,7 +62,7 @@ curl -s http://localhost:8080/api/v1/tickets/1 | jq
 
 ---
 
-## 🔍 Check Redis | Redisを確認する
+## Check Redis | Redisを確認する
 
 ```bash
 docker exec -it redis-dev redis-cli
@@ -75,7 +75,7 @@ You should see keys like `ticket::1`.
 
 ---
 
-##  Project Structure | プロジェクト構成
+## Project Structure | プロジェクト構成
 ```
 controllers/   → TicketController
 service/       → TicketServiceImpl
@@ -87,7 +87,7 @@ enums/         → Status, Priority
 
 ---
 
-##  Concept | コンセプト
+## Concept | コンセプト
 
 **Cache explained simply:**  
 Looking up data directly in the repository is like going to the library every time to find the same book.  
@@ -99,7 +99,7 @@ Caching is like making a quick **note in your pocket** — next time, you check 
 
 ---
 
-## 📝 Note | 備考
+## Note | 備考
 
 - This is not a production-ready system. It uses a **FakeRepository** with artificial latency to demonstrate the effect of caching.  
 - 本番用のシステムではありません。キャッシュ効果を示すために、遅延を追加した **FakeRepository** を使用しています。  
